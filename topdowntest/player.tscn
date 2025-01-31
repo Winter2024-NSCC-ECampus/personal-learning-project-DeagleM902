@@ -1,0 +1,89 @@
+[gd_scene load_steps=13 format=3 uid="uid://dbds3gb0qmn6m"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_0usv2"]
+[ext_resource type="Texture2D" uid="uid://c518rjen25rvl" path="res://images/Tiny RPG Character Asset Pack v1.03 -Free Soldier&Orc/Characters(100x100)/Soldier/Soldier with shadows/Soldier-Walk.png" id="1_ikg7f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyap4"]
+atlas = ExtResource("1_ikg7f")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ngml5"]
+atlas = ExtResource("1_ikg7f")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1ra2"]
+atlas = ExtResource("1_ikg7f")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkcxp"]
+atlas = ExtResource("1_ikg7f")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7isq"]
+atlas = ExtResource("1_ikg7f")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbaus"]
+atlas = ExtResource("1_ikg7f")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7il73"]
+atlas = ExtResource("1_ikg7f")
+region = Rect2(600, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0jgq"]
+atlas = ExtResource("1_ikg7f")
+region = Rect2(700, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5fo84"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jyap4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ngml5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1ra2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vkcxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7isq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tbaus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7il73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0jgq")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_go2hy"]
+radius = 6.0
+height = 17.6
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(2, 2)
+motion_mode = 1
+script = ExtResource("1_0usv2")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5fo84")
+animation = &"walk"
+frame_progress = 0.262775
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1.8)
+shape = SubResource("CapsuleShape2D_go2hy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
