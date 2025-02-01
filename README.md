@@ -1,7 +1,7 @@
 # DeagleMGitHubSelfLearning
 This is my Milestone 1. I have 2 GoDot projects showcasing some of the nodes and scripts I've been working on and learning about.
 
-## NOTE - This project is using GoDot v4.3
+### NOTE - This project is using GoDot v4.3
 
 ## NodesTesting - 2D platformer
 This is the main project showcasing the use of several different nodes including Lighting, Tilemaps, and Player character related nodes. A small level that can be navigated with a player character. The player can interact with coins, a moving platform, and a decorative "secret" path to cross through the level.
