@@ -1,8 +1,24 @@
-[gd_scene load_steps=18 format=3 uid="uid://y45v8obasl7o"]
+[gd_scene load_steps=22 format=3 uid="uid://y45v8obasl7o"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_8sfsg"]
 [ext_resource type="Texture2D" uid="uid://0eluht2u3m0o" path="res://images/brackeys_platformer_assets/brackeys_platformer_assets/sprites/knight.png" id="1_etw70"]
 [ext_resource type="AudioStream" uid="uid://byna88frjw4a5" path="res://images/brackeys_platformer_assets/brackeys_platformer_assets/sounds/jump.wav" id="3_w0fbw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uv6yw"]
+atlas = ExtResource("1_etw70")
+region = Rect2(0, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqgg5"]
+atlas = ExtResource("1_etw70")
+region = Rect2(32, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sptyn"]
+atlas = ExtResource("1_etw70")
+region = Rect2(64, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_us13v"]
+atlas = ExtResource("1_etw70")
+region = Rect2(96, 224, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w7p64"]
 atlas = ExtResource("1_etw70")
@@ -54,6 +70,23 @@ region = Rect2(224, 64, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ockov"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uv6yw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqgg5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sptyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_us13v")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_w7p64")
@@ -113,22 +146,11 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ockov")
-animation = &"run"
+animation = &"dead"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 3)
 shape = SubResource("RectangleShape2D_nbavy")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, -50)
-process_callback = 0
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-drag_left_margin = 0.1
-drag_top_margin = 0.0
-drag_right_margin = 0.1
-editor_draw_drag_margin = true
 
 [node name="JumpNoise" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_w0fbw")

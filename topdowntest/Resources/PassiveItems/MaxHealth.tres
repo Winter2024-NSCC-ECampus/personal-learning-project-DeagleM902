@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://ba1ka6ikrjflq"]
+
+[ext_resource type="Script" path="res://PassiveItem.gd" id="1_rgyeq"]
+[ext_resource type="Texture2D" uid="uid://c6qohhk4wcyss" path="res://images/Icon-Hollow_Heart.webp" id="2_7tr6w"]
+[ext_resource type="Script" path="res://Stats.gd" id="3_65nup"]
+
+[sub_resource type="Resource" id="Resource_3sfeq"]
+script = ExtResource("3_65nup")
+description = "+20 Max Health"
+max_health = 20.0
+recovery = 0.0
+armour = 0.0
+movement_speed = 0.0
+attack_power = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_5xusb"]
+script = ExtResource("3_65nup")
+description = "+25 Max Health"
+max_health = 25.0
+recovery = 0.0
+armour = 0.0
+movement_speed = 0.0
+attack_power = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_y0u6w"]
+script = ExtResource("3_65nup")
+description = "+35 Max Health"
+max_health = 35.0
+recovery = 0.0
+armour = 0.0
+movement_speed = 0.0
+attack_power = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[resource]
+script = ExtResource("1_rgyeq")
+upgrades = Array[ExtResource("3_65nup")]([SubResource("Resource_3sfeq"), SubResource("Resource_5xusb"), SubResource("Resource_y0u6w")])
+title = "Max Health"
+texture = ExtResource("2_7tr6w")

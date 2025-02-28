@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://bl3jgw1g8bogn"]
+
+[ext_resource type="Script" path="res://EnemyType.gd" id="1_hs683"]
+[ext_resource type="Script" path="res://PickupResource.gd" id="1_yjypd"]
+[ext_resource type="Resource" uid="uid://cp33tb07esmi6" path="res://Resources/Pickups/GreenGem.tres" id="2_a6pk7"]
+[ext_resource type="Texture2D" uid="uid://c8igjleltwobt" path="res://images/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7/frames/orc_warrior_idle_anim_f0.png" id="2_yjc0d"]
+
+[resource]
+script = ExtResource("1_hs683")
+title = "Orc"
+texture = ExtResource("2_yjc0d")
+health = 5.0
+damage = 5.0
+drops = Array[ExtResource("1_yjypd")]([ExtResource("2_a6pk7")])

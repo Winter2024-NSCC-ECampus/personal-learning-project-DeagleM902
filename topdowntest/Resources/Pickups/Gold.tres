@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Gold" load_steps=3 format=3 uid="uid://b75k2ximsgxok"]
+
+[ext_resource type="Script" path="res://Gold.gd" id="1_rbieu"]
+[ext_resource type="Texture2D" uid="uid://cdnayfcea48d" path="res://images/Icon-Coin_Bag.webp" id="2_3ap3n"]
+
+[resource]
+script = ExtResource("1_rbieu")
+gold = 5
+title = "Gold"
+texture = ExtResource("2_3ap3n")

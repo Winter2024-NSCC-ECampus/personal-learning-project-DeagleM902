@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="SingleShot" load_steps=13 format=3 uid="uid://cjjkm8urj4b34"]
+
+[ext_resource type="PackedScene" uid="uid://yf3m6wrtbwca" path="res://projectile.tscn" id="1_jy2rg"]
+[ext_resource type="Resource" uid="uid://pdmtm0buqdtf" path="res://Resources/Weapons/HolyWand.tres" id="1_ulfxu"]
+[ext_resource type="Script" path="res://SingleShot.gd" id="2_7pyvm"]
+[ext_resource type="Resource" uid="uid://caybs5rekid3r" path="res://Resources/PassiveItems/Magnet.tres" id="2_73t1r"]
+[ext_resource type="Texture2D" uid="uid://cq4vv1ih4fuen" path="res://images/Icon-Magic_Wand.webp" id="3_27ie8"]
+[ext_resource type="Script" path="res://Upgrade.gd" id="4_shiu2"]
+[ext_resource type="Script" path="res://ProjectileUpgrade.gd" id="5_orglf"]
+
+[sub_resource type="Resource" id="Resource_gp36k"]
+script = ExtResource("5_orglf")
+speed = 0.0
+damage = 1.0
+cooldown = 0.0
+description = "+1 Damage"
+
+[sub_resource type="Resource" id="Resource_0h7ns"]
+script = ExtResource("5_orglf")
+speed = 0.0
+damage = 0.0
+cooldown = -0.2
+description = "-0.2 Cooldown"
+
+[sub_resource type="Resource" id="Resource_3w5sh"]
+script = ExtResource("5_orglf")
+speed = 200.0
+damage = 0.0
+cooldown = 0.0
+description = "+200 Speed"
+
+[sub_resource type="Resource" id="Resource_2dt2i"]
+script = ExtResource("5_orglf")
+speed = 0.0
+damage = 2.0
+cooldown = 0.0
+description = "+2 Damage"
+
+[sub_resource type="Resource" id="Resource_uod4c"]
+script = ExtResource("5_orglf")
+speed = 0.0
+damage = 0.0
+cooldown = -0.1
+description = "-0.1 Cooldown"
+
+[resource]
+script = ExtResource("2_7pyvm")
+damage = 1.0
+cooldown = 0.75
+speed = 250.0
+projectile_node = ExtResource("1_jy2rg")
+upgrades = Array[ExtResource("4_shiu2")]([SubResource("Resource_gp36k"), SubResource("Resource_0h7ns"), SubResource("Resource_3w5sh"), SubResource("Resource_2dt2i"), SubResource("Resource_uod4c")])
+item_needed = ExtResource("2_73t1r")
+evolution = ExtResource("1_ulfxu")
+title = "Magic Wand"
+texture = ExtResource("3_27ie8")

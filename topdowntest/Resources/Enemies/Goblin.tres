@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://bdpnm65r4yot5"]
+
+[ext_resource type="Script" path="res://EnemyType.gd" id="1_k3rm2"]
+[ext_resource type="Script" path="res://PickupResource.gd" id="1_sj347"]
+[ext_resource type="Resource" uid="uid://b8lwcj5lb34y4" path="res://Resources/Pickups/XP_Placeholder.tres" id="2_3pmgp"]
+[ext_resource type="Texture2D" uid="uid://bjvdf5pdyngnl" path="res://images/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7/frames/goblin_idle_anim_f0.png" id="2_odhxr"]
+
+[resource]
+script = ExtResource("1_k3rm2")
+title = "Goblin"
+texture = ExtResource("2_odhxr")
+health = 3.0
+damage = 1.0
+drops = Array[ExtResource("1_sj347")]([ExtResource("2_3pmgp")])

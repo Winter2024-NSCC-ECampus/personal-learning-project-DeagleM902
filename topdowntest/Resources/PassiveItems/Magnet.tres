@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://caybs5rekid3r"]
+
+[ext_resource type="Script" path="res://PassiveItem.gd" id="1_qu3xi"]
+[ext_resource type="Texture2D" uid="uid://ckldulxp4lto5" path="res://images/Icon-Attractorb.webp" id="2_3cjkt"]
+[ext_resource type="Script" path="res://Stats.gd" id="3_hl1hb"]
+
+[sub_resource type="Resource" id="Resource_aytsm"]
+script = ExtResource("3_hl1hb")
+description = "+15 Pickup Range"
+max_health = 0.0
+recovery = 0.0
+armour = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 15.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_fjhaw"]
+script = ExtResource("3_hl1hb")
+description = "+20 Pickup Range"
+max_health = 0.0
+recovery = 0.0
+armour = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 20.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_g7lpa"]
+script = ExtResource("3_hl1hb")
+description = "+25 Pickup Range"
+max_health = 0.0
+recovery = 0.0
+armour = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 25.0
+growth = 0.0
+
+[resource]
+script = ExtResource("1_qu3xi")
+upgrades = Array[ExtResource("3_hl1hb")]([SubResource("Resource_aytsm"), SubResource("Resource_fjhaw"), SubResource("Resource_g7lpa")])
+title = "Magnet"
+texture = ExtResource("2_3cjkt")

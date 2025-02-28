@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://bluhvghm7co5i"]
+
+[ext_resource type="Script" path="res://PassiveItem.gd" id="1_mqkne"]
+[ext_resource type="Texture2D" uid="uid://7ff4pt4oweap" path="res://images/Icon-Armor.webp" id="2_mw471"]
+[ext_resource type="Script" path="res://Stats.gd" id="3_oolav"]
+
+[sub_resource type="Resource" id="Resource_gfccp"]
+script = ExtResource("3_oolav")
+description = "+1 Armour"
+max_health = 0.0
+recovery = 0.0
+armour = 1.0
+movement_speed = 0.0
+attack_power = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_ak4uq"]
+script = ExtResource("3_oolav")
+description = "+2 Armour"
+max_health = 0.0
+recovery = 0.0
+armour = 2.0
+movement_speed = 0.0
+attack_power = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[sub_resource type="Resource" id="Resource_6wdo7"]
+script = ExtResource("3_oolav")
+description = "+4 Armour"
+max_health = 0.0
+recovery = 0.0
+armour = 4.0
+movement_speed = 0.0
+attack_power = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+
+[resource]
+script = ExtResource("1_mqkne")
+upgrades = Array[ExtResource("3_oolav")]([SubResource("Resource_gfccp"), SubResource("Resource_ak4uq"), SubResource("Resource_6wdo7")])
+title = "Armour"
+texture = ExtResource("2_mw471")

@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://jf60oj0nbp03"]
+
+[ext_resource type="Texture2D" uid="uid://4mqr1prwdbtl" path="res://images/brackeys_platformer_assets/brackeys_platformer_assets/sprites/spikes.png" id="1_tf60r"]
+[ext_resource type="PackedScene" uid="uid://7pjtn086hxw7" path="res://kill_zone.tscn" id="3_d2law"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5gej4"]
+size = Vector2(8, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w65he"]
+size = Vector2(12, 14)
+
+[node name="Spike" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 3.14159
+texture = ExtResource("1_tf60r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+shape = SubResource("RectangleShape2D_5gej4")
+
+[node name="KillZone" parent="." instance=ExtResource("3_d2law")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_w65he")

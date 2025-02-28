@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://drm71p2h5wgxp"]
+
+[ext_resource type="Script" path="res://PickupResource.gd" id="1_dmjwo"]
+[ext_resource type="Script" path="res://EnemyType.gd" id="1_mhw27"]
+[ext_resource type="Resource" uid="uid://b8lwcj5lb34y4" path="res://Resources/Pickups/XP_Placeholder.tres" id="2_520vk"]
+[ext_resource type="Texture2D" uid="uid://blhwrwptvocd6" path="res://images/0x72_DungeonTilesetII_v1.7/0x72_DungeonTilesetII_v1.7/frames/swampy_anim_f1.png" id="2_xl5yj"]
+
+[resource]
+script = ExtResource("1_mhw27")
+title = "Slime"
+texture = ExtResource("2_xl5yj")
+health = 3.0
+damage = 3.0
+drops = Array[ExtResource("1_dmjwo")]([ExtResource("2_520vk")])

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Gem" load_steps=3 format=3 uid="uid://b8lwcj5lb34y4"]
+
+[ext_resource type="Script" path="res://Gem.gd" id="1_06l8b"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_63ank"]
+size = Vector2(5, 5)
+
+[resource]
+script = ExtResource("1_06l8b")
+XP = 1.0
+title = "XP_Placeholder"
+icon = SubResource("PlaceholderTexture2D_63ank")
+description = "Basic +1 XP gem."

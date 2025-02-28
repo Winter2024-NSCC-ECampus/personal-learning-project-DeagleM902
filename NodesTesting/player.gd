@@ -1,13 +1,23 @@
 extends CharacterBody2D
 
+@onready var game_manager = %GameManager
 
 @export var SPEED = 150.0
 @export var JUMP_VELOCITY = -300.0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var jump_effect = $JumpNoise
+var is_dead = false
+
+
+func _ready() -> void:
+	is_dead = false
 
 func _physics_process(delta: float) -> void:
+	#Skip all if player is dead
+	if is_dead:
+		return
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -37,3 +47,9 @@ func _physics_process(delta: float) -> void:
 		$AnimatedSprite2D.animation = "idle"
 	
 	move_and_slide()
+
+func player_death() -> void:
+	print("player script runnning")
+	is_dead = true
+	$AnimatedSprite2D.animation = "dead"
+	

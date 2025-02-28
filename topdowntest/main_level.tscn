@@ -796,4 +796,4 @@ scale = Vector2(2, 2)
 player = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("3_udhtg")]
-position = Vector2(493, 315)
+position = Vector2(320, 180)

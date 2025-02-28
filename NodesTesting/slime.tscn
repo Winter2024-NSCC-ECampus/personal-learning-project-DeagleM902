@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://hhn4j7xc5qyx"]
+
+[ext_resource type="Script" path="res://slime.gd" id="1_h2hb7"]
+[ext_resource type="Texture2D" uid="uid://bleon1u1e1pfl" path="res://images/brackeys_platformer_assets/brackeys_platformer_assets/sprites/slime_green.png" id="1_i608k"]
+[ext_resource type="PackedScene" uid="uid://7pjtn086hxw7" path="res://kill_zone.tscn" id="2_id3wu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pd64c"]
+atlas = ExtResource("1_i608k")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sge1c"]
+atlas = ExtResource("1_i608k")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84hcg"]
+atlas = ExtResource("1_i608k")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcjci"]
+atlas = ExtResource("1_i608k")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eu642"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pd64c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sge1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84hcg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mcjci")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pf2se"]
+size = Vector2(10, 12)
+
+[node name="Slime" type="Node2D"]
+script = ExtResource("1_h2hb7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_eu642")
+autoplay = "default"
+frame = 1
+frame_progress = 0.355346
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(0, 6)
+target_position = Vector2(8, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(0, 6)
+target_position = Vector2(-8, 0)
+
+[node name="KillZone" parent="." instance=ExtResource("2_id3wu")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone"]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_pf2se")

@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://dtnjx7cj7wen3"]
+
+[ext_resource type="Script" path="res://PassiveItem.gd" id="1_qa21y"]
+[ext_resource type="Texture2D" uid="uid://c06r0kric8dd2" path="res://images/Icon-Crown.webp" id="2_4hsf0"]
+[ext_resource type="Script" path="res://Stats.gd" id="3_gql0v"]
+
+[sub_resource type="Resource" id="Resource_1pkoe"]
+script = ExtResource("3_gql0v")
+description = "+10% XP Gain"
+max_health = 0.0
+recovery = 0.0
+armour = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.1
+
+[sub_resource type="Resource" id="Resource_4yswk"]
+script = ExtResource("3_gql0v")
+description = "+20% XP Gain"
+max_health = 0.0
+recovery = 0.0
+armour = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.2
+
+[sub_resource type="Resource" id="Resource_4v7ou"]
+script = ExtResource("3_gql0v")
+description = "+30% XP Gain"
+max_health = 0.0
+recovery = 0.0
+armour = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.3
+
+[resource]
+script = ExtResource("1_qa21y")
+upgrades = Array[ExtResource("3_gql0v")]([SubResource("Resource_1pkoe"), SubResource("Resource_4yswk"), SubResource("Resource_4v7ou")])
+title = "Growth"
+texture = ExtResource("2_4hsf0")

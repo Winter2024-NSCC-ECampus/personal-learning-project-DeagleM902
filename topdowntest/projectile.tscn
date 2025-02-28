@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://yf3m6wrtbwca"]
+
+[ext_resource type="Script" path="res://projectile.gd" id="1_sehkr"]
+
+[sub_resource type="Gradient" id="Gradient_x8drm"]
+offsets = PackedFloat32Array(0.597403, 0.714286)
+colors = PackedColorArray(1, 0, 0, 1, 1, 0.305882, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_im6p3"]
+gradient = SubResource("Gradient_x8drm")
+width = 10
+height = 10
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g77pj"]
+size = Vector2(10, 10)
+
+[sub_resource type="Gradient" id="Gradient_6nfu5"]
+offsets = PackedFloat32Array(0, 0.385246, 0.844262)
+colors = PackedColorArray(1, 0, 0.0686369, 1, 1, 0.305882, 0, 1, 1, 0.918566, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_tyovi"]
+gradient = SubResource("Gradient_6nfu5")
+
+[sub_resource type="Curve" id="Curve_ayspn"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_snbp4"]
+curve = SubResource("Curve_ayspn")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_snxit"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 8.0
+initial_velocity_min = -10.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, 0, 0)
+scale_min = 2.0
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_snbp4")
+color_ramp = SubResource("GradientTexture1D_tyovi")
+turbulence_enabled = true
+turbulence_influence_max = 0.25
+turbulence_initial_displacement_min = 1.49012e-06
+turbulence_initial_displacement_max = 2.0
+
+[node name="Projectile" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_sehkr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_im6p3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_g77pj")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 200
+process_material = SubResource("ParticleProcessMaterial_snxit")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]
