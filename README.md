@@ -16,14 +16,14 @@ This is the main project showcasing the use of several different nodes including
  - Hazards : Spike trap capable of damaging the player character.
 
 ## TopDownTest - Vampire Survivors inspired
-This project snippet includes top-down 2D movement, a timer, and an enemy spawning method. The level achieves an infinite scrolling effect through the use of a Parallax2D background node. The spawning of enemies is achieved through a "game manager" script which controls the timer display as well as the instantiation (add_child) of enemies with given parameters. The player has a projectile "wand" weapon and several passive items, these can all be upgraded through levels or a chest system.
+This project snippet includes top-down 2D movement, a timer, and an enemy spawning method. The level achieves an infinite scrolling effect through the use of a Parallax2D background node. The spawning of enemies is achieved through a "game manager" script which controls the timer display as well as the instantiation (add_child) of enemies with given parameters. The player has a projectile "wand" weapon and empty slots for more weapons or for passive items. These can all be upgraded through levels or a chest system.
 
 ### Features
  - Weapons : Designed to allow for multiple weapon types. Includes a basic wand projectile, a circling book projectile, and a lightning bolt weapon. These weapons each have an upgraded "evolved" form when combined with a specific passive item.
 
  - Passive Items : Allows modification of player attributes (Health, Might, Recovery, etc.).
 
- - Random Items : If the player has item slots remaining, random items will appear until these slots have been filled.
+ - Random Items : If the player has item slots remaining, random items will appear in chests or on level up until these slots have been filled.
 
  - Enemies : Wave spawning of multiple enemy types.
 
