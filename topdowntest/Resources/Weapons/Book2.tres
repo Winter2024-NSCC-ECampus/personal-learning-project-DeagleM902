@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CircularWeapon" load_steps=6 format=3 uid="uid://b16almh35onxl"]
+
+[ext_resource type="Texture2D" uid="uid://p21gtnu70ojk" path="res://images/Icon-Unholy_Vespers.webp" id="1_3suo1"]
+[ext_resource type="PackedScene" uid="uid://yf3m6wrtbwca" path="res://projectile.tscn" id="2_4d7g6"]
+[ext_resource type="Script" path="res://CircularWeapon.gd" id="3_vmfi7"]
+[ext_resource type="Texture2D" uid="uid://bgkagsr0h1b67" path="res://images/fa662.png" id="4_a85h3"]
+[ext_resource type="Script" path="res://Upgrade.gd" id="5_g7bov"]
+
+[resource]
+script = ExtResource("3_vmfi7")
+angular_speed = 270
+radius = 75
+amount = 7
+damage = 10.0
+cooldown = 2.0
+speed = 0.0
+projectile_node = ExtResource("2_4d7g6")
+upgrades = Array[ExtResource("5_g7bov")]([])
+title = "Book2"
+icon = ExtResource("1_3suo1")
+texture = ExtResource("4_a85h3")

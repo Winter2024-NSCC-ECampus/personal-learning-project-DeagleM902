@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dra6qc5q8ft3y"]
+
+[ext_resource type="Script" path="res://Scripts/pong_ball.gd" id="1_qharf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8cbno"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_236xv"]
+size = Vector2(20, 20)
+
+[node name="pong_ball" type="CharacterBody2D"]
+script = ExtResource("1_qharf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8cbno")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_236xv")

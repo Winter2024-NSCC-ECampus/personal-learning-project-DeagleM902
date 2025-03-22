@@ -15,6 +15,7 @@ might = 0.1
 area = 0.0
 magnet = 0.0
 growth = 0.0
+luck = 0.0
 
 [sub_resource type="Resource" id="Resource_mtsq4"]
 script = ExtResource("3_1txsi")
@@ -27,6 +28,7 @@ might = 0.2
 area = 0.0
 magnet = 0.0
 growth = 0.0
+luck = 0.0
 
 [sub_resource type="Resource" id="Resource_x2cg8"]
 script = ExtResource("3_1txsi")
@@ -39,9 +41,11 @@ might = 0.3
 area = 0.0
 magnet = 0.0
 growth = 0.0
+luck = 0.0
 
 [resource]
 script = ExtResource("1_1626f")
 upgrades = Array[ExtResource("3_1txsi")]([SubResource("Resource_qhbse"), SubResource("Resource_mtsq4"), SubResource("Resource_x2cg8")])
 title = "Might"
+icon = ExtResource("2_krs2o")
 texture = ExtResource("2_krs2o")

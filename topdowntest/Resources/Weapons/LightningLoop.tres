@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="lightning" load_steps=6 format=3 uid="uid://br6fr67p665dd"]
+
+[ext_resource type="Texture2D" uid="uid://im4l0otap8ld" path="res://images/Icon-Thunder_Loop.webp" id="1_pak70"]
+[ext_resource type="PackedScene" uid="uid://yf3m6wrtbwca" path="res://projectile.tscn" id="2_dlbde"]
+[ext_resource type="Script" path="res://Lightning.gd" id="3_c6k7b"]
+[ext_resource type="Texture2D" uid="uid://brln4dbkloebb" path="res://images/fb1029.png" id="4_y8qp3"]
+[ext_resource type="Script" path="res://Upgrade.gd" id="5_2l58n"]
+
+[resource]
+script = ExtResource("3_c6k7b")
+amount = 7
+damage = 10.0
+cooldown = 2.0
+speed = 0.0
+projectile_node = ExtResource("2_dlbde")
+upgrades = Array[ExtResource("5_2l58n")]([])
+title = "Lightning Loop"
+icon = ExtResource("1_pak70")
+texture = ExtResource("4_y8qp3")

@@ -1,0 +1,211 @@
+[gd_scene load_steps=4 format=3 uid="uid://br1n31660o4it"]
+
+[ext_resource type="PackedScene" uid="uid://taal5u5widj7" path="res://Scenes/peg.tscn" id="2_3ivsq"]
+[ext_resource type="PackedScene" uid="uid://dwymqui85gs3l" path="res://Scenes/coin.tscn" id="3_6d1me"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fa8w6"]
+friction = 0.5
+bounce = 0.25
+
+[node name="Plinko" type="Node2D"]
+
+[node name="PegBoard" type="Node2D" parent="."]
+
+[node name="Peg" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(748, 591)
+
+[node name="Peg2" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(746, 446)
+
+[node name="Peg3" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(819, 374)
+
+[node name="Peg4" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(891, 304)
+
+[node name="Peg5" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1037, 302)
+
+[node name="Peg6" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1107, 373)
+
+[node name="Peg7" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(962, 374)
+
+[node name="Peg8" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1036, 445)
+
+[node name="Peg9" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(891, 446)
+
+[node name="Peg10" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1178, 446)
+
+[node name="Peg11" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1253, 520)
+
+[node name="Peg12" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1108, 518)
+
+[node name="Peg13" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(820, 520)
+
+[node name="Peg14" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(677, 519)
+
+[node name="Peg15" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(529, 661)
+
+[node name="Peg16" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(605, 593)
+
+[node name="Peg17" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(673, 664)
+
+[node name="Peg18" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(819, 663)
+
+[node name="Peg19" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(965, 662)
+
+[node name="Peg20" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1036, 591)
+
+[node name="Peg21" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(893, 591)
+
+[node name="Peg22" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(958, 523)
+
+[node name="Peg23" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1182, 592)
+
+[node name="Peg24" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1326, 592)
+
+[node name="Peg25" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1396, 665)
+
+[node name="Peg26" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1254, 663)
+
+[node name="Peg27" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1107, 662)
+
+[node name="Peg28" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1181, 735)
+
+[node name="Peg29" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1324, 734)
+
+[node name="Peg30" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1471, 736)
+
+[node name="Peg31" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1540, 807)
+
+[node name="Peg32" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1398, 806)
+
+[node name="Peg33" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1252, 808)
+
+[node name="Peg34" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1110, 806)
+
+[node name="Peg35" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1034, 735)
+
+[node name="Peg36" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(890, 734)
+
+[node name="Peg37" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(748, 736)
+
+[node name="Peg38" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(602, 735)
+
+[node name="Peg39" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(458, 735)
+
+[node name="Peg40" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(385, 810)
+
+[node name="Peg45" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(315, 879)
+
+[node name="Peg46" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(241, 953)
+
+[node name="Peg47" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(387, 952)
+
+[node name="Peg48" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(457, 880)
+
+[node name="Peg49" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(531, 953)
+
+[node name="Peg50" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(603, 880)
+
+[node name="Peg51" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(675, 950)
+
+[node name="Peg52" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(746, 880)
+
+[node name="Peg53" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(818, 950)
+
+[node name="Peg54" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(894, 881)
+
+[node name="Peg55" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(965, 951)
+
+[node name="Peg56" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1036, 879)
+
+[node name="Peg57" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1107, 954)
+
+[node name="Peg58" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1178, 881)
+
+[node name="Peg59" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1252, 952)
+
+[node name="Peg60" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1323, 880)
+
+[node name="Peg61" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1397, 953)
+
+[node name="Peg62" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1469, 881)
+
+[node name="Peg63" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1540, 953)
+
+[node name="Peg64" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1613, 880)
+
+[node name="Peg65" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(1687, 952)
+
+[node name="Peg43" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(532, 807)
+
+[node name="Peg41" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(676, 808)
+
+[node name="Peg42" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(820, 808)
+
+[node name="Peg44" parent="PegBoard" instance=ExtResource("2_3ivsq")]
+position = Vector2(963, 808)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("3_6d1me")]
+position = Vector2(1008, -181)
+physics_material_override = SubResource("PhysicsMaterial_fa8w6")

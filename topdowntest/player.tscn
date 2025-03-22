@@ -1,20 +1,18 @@
-[gd_scene load_steps=41 format=3 uid="uid://dbds3gb0qmn6m"]
+[gd_scene load_steps=39 format=3 uid="uid://dbds3gb0qmn6m"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_0usv2"]
-[ext_resource type="PackedScene" uid="uid://cw1p2psms2x0m" path="res://Resources/Weapons/slot.tscn" id="2_527a5"]
+[ext_resource type="PackedScene" uid="uid://cw1p2psms2x0m" path="res://slot.tscn" id="2_527a5"]
 [ext_resource type="Texture2D" uid="uid://clwts4cl7ds2d" path="res://images/GUI.png" id="2_hjj08"]
 [ext_resource type="Texture2D" uid="uid://bllqyonnbydvs" path="res://images/Tiny RPG Character Asset Pack v1.03 -Free Soldier&Orc/Characters(100x100)/Soldier/Soldier/Soldier.png" id="2_t4fem"]
 [ext_resource type="Resource" uid="uid://cjjkm8urj4b34" path="res://Resources/Weapons/MagicWand.tres" id="3_hth7o"]
 [ext_resource type="Texture2D" uid="uid://cm7jo0bhs5adx" path="res://images/UnderExpBar.png" id="4_f3ge5"]
 [ext_resource type="Texture2D" uid="uid://dxn65ublkl3ta" path="res://images/OverExpBar.png" id="5_el183"]
-[ext_resource type="PackedScene" uid="uid://dc4hdquuwgb6o" path="res://Resources/PassiveItems/passive_slot.tscn" id="5_ere4r"]
-[ext_resource type="Resource" uid="uid://caybs5rekid3r" path="res://Resources/PassiveItems/Magnet.tres" id="6_0q5wl"]
+[ext_resource type="PackedScene" uid="uid://dc4hdquuwgb6o" path="res://passive_slot.tscn" id="5_ere4r"]
 [ext_resource type="Texture2D" uid="uid://d1h2ebckb7lx0" path="res://images/ProgressExpBar.png" id="6_s03nf"]
 [ext_resource type="Script" path="res://options.gd" id="7_6fd6b"]
-[ext_resource type="Resource" uid="uid://cq6lq8jq4c5fu" path="res://Resources/PassiveItems/Might.tres" id="7_88237"]
-[ext_resource type="Resource" uid="uid://d4dhcmblgr7ln" path="res://Resources/PassiveItems/Recovery.tres" id="8_nva60"]
 [ext_resource type="Script" path="res://chest.gd" id="11_g7a83"]
 [ext_resource type="Texture2D" uid="uid://da27516fr81er" path="res://images/Fantasy RPG (Toony) 32x32.png" id="12_24qie"]
+[ext_resource type="Script" path="res://back.gd" id="17_qp0ce"]
 
 [sub_resource type="Gradient" id="Gradient_jpyyn"]
 offsets = PackedFloat32Array(0, 0.778689, 1)
@@ -254,15 +252,12 @@ offset_bottom = 100.0
 
 [node name="PassiveSlot" parent="UI/PassiveItems" instance=ExtResource("5_ere4r")]
 layout_mode = 2
-item = ExtResource("6_0q5wl")
 
 [node name="PassiveSlot2" parent="UI/PassiveItems" instance=ExtResource("5_ere4r")]
 layout_mode = 2
-item = ExtResource("7_88237")
 
 [node name="PassiveSlot3" parent="UI/PassiveItems" instance=ExtResource("5_ere4r")]
 layout_mode = 2
-item = ExtResource("8_nva60")
 
 [node name="XP" type="TextureProgressBar" parent="UI"]
 unique_name_in_owner = true
@@ -305,6 +300,7 @@ panel = NodePath("../Panel")
 
 [node name="Chest" type="NinePatchRect" parent="UI"]
 process_mode = 3
+visible = false
 custom_minimum_size = Vector2(300, 200)
 anchors_preset = 8
 anchor_left = 0.5
@@ -428,6 +424,23 @@ offset_bottom = 54.0
 text = "Gold: 0"
 horizontal_alignment = 2
 
+[node name="Back" type="Button" parent="UI"]
+process_mode = 3
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.0
+offset_top = -15.5
+offset_right = 57.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Back to Menu"
+script = ExtResource("17_qp0ce")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_5fo84")
@@ -478,6 +491,7 @@ shape = SubResource("CircleShape2D_2upol")
 
 [connection signal="pressed" from="UI/Chest/Open" to="UI/Chest" method="_on_open_pressed"]
 [connection signal="pressed" from="UI/Chest/Close" to="UI/Chest" method="_on_close_pressed"]
+[connection signal="pressed" from="UI/Back" to="UI/Back" method="_on_pressed"]
 [connection signal="body_entered" from="SelfDamage" to="." method="_on_self_damage_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="Magnet" to="." method="_on_magnet_area_entered"]

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="SingleShot" load_steps=13 format=3 uid="uid://cjjkm8urj4b34"]
+[gd_resource type="Resource" script_class="SingleShot" load_steps=14 format=3 uid="uid://cjjkm8urj4b34"]
 
 [ext_resource type="PackedScene" uid="uid://yf3m6wrtbwca" path="res://projectile.tscn" id="1_jy2rg"]
 [ext_resource type="Resource" uid="uid://pdmtm0buqdtf" path="res://Resources/Weapons/HolyWand.tres" id="1_ulfxu"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cq4vv1ih4fuen" path="res://images/Icon-Magic_Wand.webp" id="3_27ie8"]
 [ext_resource type="Script" path="res://Upgrade.gd" id="4_shiu2"]
 [ext_resource type="Script" path="res://ProjectileUpgrade.gd" id="5_orglf"]
+[ext_resource type="Texture2D" uid="uid://cdh6fep5ob8dm" path="res://images/projectile_texture_test.tres" id="6_bmb3q"]
 
 [sub_resource type="Resource" id="Resource_gp36k"]
 script = ExtResource("5_orglf")
@@ -53,4 +54,5 @@ upgrades = Array[ExtResource("4_shiu2")]([SubResource("Resource_gp36k"), SubReso
 item_needed = ExtResource("2_73t1r")
 evolution = ExtResource("1_ulfxu")
 title = "Magic Wand"
-texture = ExtResource("3_27ie8")
+icon = ExtResource("3_27ie8")
+texture = ExtResource("6_bmb3q")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbci2ojmlnju7"]
+
+[ext_resource type="Script" path="res://save_data.gd" id="1_kgpsi"]
+
+[node name="SaveData" type="Node2D"]
+script = ExtResource("1_kgpsi")

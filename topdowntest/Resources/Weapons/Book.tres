@@ -1,0 +1,66 @@
+[gd_resource type="Resource" script_class="CircularWeapon" load_steps=14 format=3 uid="uid://c6xpnivfio7mg"]
+
+[ext_resource type="Resource" uid="uid://b16almh35onxl" path="res://Resources/Weapons/Book2.tres" id="1_dumv1"]
+[ext_resource type="PackedScene" uid="uid://yf3m6wrtbwca" path="res://projectile.tscn" id="1_tyuko"]
+[ext_resource type="Script" path="res://CircularWeapon.gd" id="2_vkr6b"]
+[ext_resource type="Texture2D" uid="uid://bewwqd8f6t1c1" path="res://images/Icon-King_Bible.webp" id="3_dnrfc"]
+[ext_resource type="Resource" uid="uid://d4dhcmblgr7ln" path="res://Resources/PassiveItems/Recovery.tres" id="3_u3llt"]
+[ext_resource type="Texture2D" uid="uid://bgkagsr0h1b67" path="res://images/fa662.png" id="4_l51sp"]
+[ext_resource type="Script" path="res://Upgrade.gd" id="4_mqpt3"]
+[ext_resource type="Script" path="res://CircularUpgrade.gd" id="5_jf0ug"]
+
+[sub_resource type="Resource" id="Resource_3f2e8"]
+script = ExtResource("5_jf0ug")
+angular_speed = 0.0
+amount = 1
+damage = 0.0
+cooldown = 0.0
+description = "+1 Projectile"
+
+[sub_resource type="Resource" id="Resource_yot1f"]
+script = ExtResource("5_jf0ug")
+angular_speed = 90.0
+amount = 0
+damage = 0.0
+cooldown = 0.0
+description = "+90 Speed"
+
+[sub_resource type="Resource" id="Resource_lrmyy"]
+script = ExtResource("5_jf0ug")
+angular_speed = 0.0
+amount = 2
+damage = 0.0
+cooldown = 0.0
+description = "+2 Projectiles"
+
+[sub_resource type="Resource" id="Resource_68awj"]
+script = ExtResource("5_jf0ug")
+angular_speed = 0.0
+amount = 0
+damage = 3.0
+cooldown = 0.0
+description = "+3 Damage"
+
+[sub_resource type="Resource" id="Resource_ehx37"]
+script = ExtResource("5_jf0ug")
+angular_speed = 0.0
+amount = 1
+damage = 0.0
+cooldown = 0.0
+description = "+1 Projectile"
+
+[resource]
+script = ExtResource("2_vkr6b")
+angular_speed = 90
+radius = 50
+amount = 1
+damage = 2.0
+cooldown = 2.0
+speed = 0.0
+projectile_node = ExtResource("1_tyuko")
+upgrades = Array[ExtResource("4_mqpt3")]([SubResource("Resource_3f2e8"), SubResource("Resource_yot1f"), SubResource("Resource_lrmyy"), SubResource("Resource_68awj"), SubResource("Resource_ehx37")])
+item_needed = ExtResource("3_u3llt")
+evolution = ExtResource("1_dumv1")
+title = "Book"
+icon = ExtResource("3_dnrfc")
+texture = ExtResource("4_l51sp")

@@ -44,4 +44,5 @@ growth = 0.0
 script = ExtResource("1_rkg5t")
 upgrades = Array[ExtResource("3_yrhi8")]([SubResource("Resource_5ttuc"), SubResource("Resource_vaw4r"), SubResource("Resource_dledf")])
 title = "Recovery"
+icon = ExtResource("2_ld3dq")
 texture = ExtResource("2_ld3dq")
